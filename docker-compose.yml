@@ -1,0 +1,15 @@
+api:
+  build: .
+  command: npm start
+  expose:
+    - "1234"
+
+pactverifier:
+  image: dius/pact-provider-verifier-docker
+  links:
+    - api:api
+  volumes:
+    - ./pacts:/tmp/pacts # binds local dir /pacts to /tmp/pacts
+  environment:
+    - pact_urls=/tmp/pacts/pactconsumerdart-pactmockservice.json # the local pact file
+    - provider_base_url=http://api:1234

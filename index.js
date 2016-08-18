@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 
 app.get('/resource/coal', (req, res) => {
-  res.send({resource: 'coal'});
+  res.status(200)
+    .append('Content-Type', 'application/json')
+    .json({resource: 'coal'});
 });
 
 app.listen(1234, () => {

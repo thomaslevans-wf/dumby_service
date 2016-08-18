@@ -1,0 +1,33 @@
+{
+  "consumer": {
+    "name": "PactConsumerDart"
+  },
+  "provider": {
+    "name": "PactMockService"
+  },
+  "interactions": [
+    {
+      "description": "a request for coal",
+      "provider_state": null,
+      "request": {
+        "method": "GET",
+        "path": "/resource/coal",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "resource": "coal"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "1.0.0"
+  }
+}

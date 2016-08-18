@@ -4,7 +4,7 @@
   "description": "",
   "main": "dumby_service.js",
   "scripts": {
-    "start": "node dumby_service.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
